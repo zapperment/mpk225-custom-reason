@@ -1,0 +1,14 @@
+{
+  "name": "mpk225-custom-reason",
+  "packageManager": "yarn@4.0.0",
+  "scripts": {
+    "format": "prettier . --write",
+    "log": "node ./scripts/logReceiver.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "easymidi": "^3.1.0"
+  }
+}
