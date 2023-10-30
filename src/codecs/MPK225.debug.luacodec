@@ -1,0 +1,20 @@
+version={2,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="Akai", model="MPK225",
+				source="MPK225.lua", picture="MPK225.png", 
+				in_ports={{description="In Port"}},
+				out_ports={{description="Out Port", optional=true}, {description="Debug"}},
+				setup_info_text="Custom codec by Zapperment (debug version)",
+				has_keyboard=true
+			},
+
+		}	return surfaces
+
+end
+

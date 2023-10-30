@@ -1,6 +1,6 @@
 import easymidi from "easymidi";
 
-const debugSysexHeader = "F0 00 20 29 02 0A 02";
+const sysexHeader = "F0 00 20 29 02 0A 01";
 
 export function listenForInput(portName) {
   const input = new easymidi.Input(portName);
@@ -8,7 +8,7 @@ export function listenForInput(portName) {
     const hexString = bytes
       .map((byte) => ("0" + (byte & 0xff).toString(16)).slice(-2).toUpperCase())
       .join(" ");
-    if (!hexString.startsWith(debugSysexHeader)) {
+    if (!hexString.startsWith(sysexHeader)) {
       return;
     }
     const message = String.fromCharCode(...bytes.slice(7, -1));
