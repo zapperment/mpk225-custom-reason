@@ -9,8 +9,7 @@ local log = debugUtils.log
 -- each supported model.
 function remote_probe()
     local controlRequest = "F0 7E 7F 06 01 F7"
-    local controlResponse =
-        "F0 7E 00 06 02 47 23 00 19 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F7"
+    local controlResponse = "F0 7E 00 06 02 47 23 00 19 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F7"
     return {
         request = controlRequest,
         response = controlResponse
@@ -28,6 +27,18 @@ function remote_init()
     log("Akai MPK225 remote control surface initialised successfully")
 end
 
+-- KEYBOARD => CODEC
+-- This function is called for each incoming MIDI event. This is where the codec interprets
+-- the message and translates it into a Remote message. The translated message is then
+-- passed back to Remote with a call to remote.handle_input(). If the event was translated
+-- and handled this function should return true, to indicate that the event was used. If the
+-- function returns false, Remote will try to find a match using the automatic input registry
+-- defined with remote.define_auto_inputs().
+function remote_process_midi()
+    --log("Received MIDI event: " .. debugUtils.midiEventToString(event))
+    return false
+end
+
 -- CODEC => KEYBOARD
 -- This function is called at regular intervals when the host is due to update the control
 -- surface state. The return value should be an array of MIDI events.
@@ -37,7 +48,7 @@ function remote_deliver_midi(_, port)
         return debugUtils.dumpLog()
     end
 
-    -- return a table with MIDI events to be delivered; 
+    -- return a table with MIDI events to be delivered;
     -- currently none, pending further custom implementation
     return {}
 end

@@ -28,124 +28,76 @@ return {{
     max = 127
 }, {
     name = "Knob 1",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 2",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 3",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 4",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 5",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 6",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 7",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 8",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 9",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 10",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 11",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 12",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 13",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 14",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 15",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 16",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 17",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 18",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 19",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 20",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 21",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 22",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 23",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Knob 24",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "delta"
 }, {
     name = "Switch 1",
     input = "value",
@@ -188,24 +140,16 @@ return {{
     max = 127
 }, {
     name = "Switch 9",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "button"
 }, {
     name = "Switch 10",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "button"
 }, {
     name = "Switch 11",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "button"
 }, {
     name = "Switch 12",
-    input = "value",
-    min = 0,
-    max = 127
+    input = "button"
 }, {
     name = "Pad D1",
     input = "button"

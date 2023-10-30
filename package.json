@@ -1,5 +1,6 @@
 {
   "name": "mpk225-custom-reason",
+  "version": "1.0.0",
   "packageManager": "yarn@4.0.0",
   "scripts": {
     "format": "prettier . --write",

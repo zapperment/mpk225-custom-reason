@@ -1,75 +1,103 @@
+function processEncoder(x)
+    return x > 63 and -(128 - x) or x
+end
+
 return {{
     pattern = "b0 02 xx",
-    name = "Knob 1"
+    name = "Knob 1",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 03 xx",
-    name = "Knob 2"
+    name = "Knob 2",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 04 xx",
-    name = "Knob 3"
+    name = "Knob 3",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 05 xx",
-    name = "Knob 4"
+    name = "Knob 4",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 06 xx",
-    name = "Knob 5"
+    name = "Knob 5",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 07 xx",
-    name = "Knob 6"
+    name = "Knob 6",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 08 xx",
-    name = "Knob 7"
+    name = "Knob 7",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 09 xx",
-    name = "Knob 8"
+    name = "Knob 8",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 02 xx",
-    name = "Knob 9"
+    name = "Knob 9",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 03 xx",
-    name = "Knob 10"
+    name = "Knob 10",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 04 xx",
-    name = "Knob 11"
+    name = "Knob 11",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 05 xx",
-    name = "Knob 12"
+    name = "Knob 12",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 06 xx",
-    name = "Knob 13"
+    name = "Knob 13",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 07 xx",
-    name = "Knob 14"
+    name = "Knob 14",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 08 xx",
-    name = "Knob 15"
+    name = "Knob 15",
+    value = "processEncoder(x)"
 }, {
     pattern = "b1 09 xx",
-    name = "Knob 16"
+    name = "Knob 16",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 02 xx",
-    name = "Knob 17"
+    name = "Knob 17",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 03 xx",
-    name = "Knob 18"
+    name = "Knob 18",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 04 xx",
-    name = "Knob 19"
+    name = "Knob 19",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 05 xx",
-    name = "Knob 20"
+    name = "Knob 20",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 06 xx",
-    name = "Knob 21"
+    name = "Knob 21",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 07 xx",
-    name = "Knob 22"
+    name = "Knob 22",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 08 xx",
-    name = "Knob 23"
+    name = "Knob 23",
+    value = "processEncoder(x)"
 }, {
     pattern = "b2 09 xx",
-    name = "Knob 24"
+    name = "Knob 24",
+    value = "processEncoder(x)"
 }, {
     pattern = "b0 15 xx",
     name = "Switch 1"
@@ -95,17 +123,21 @@ return {{
     pattern = "b1 18 xx",
     name = "Switch 8"
 }, {
-    pattern = "b3 15 xx",
-    name = "Switch 9"
+    pattern = "b3 15 ??",
+    name = "Switch 9",
+    value = "1"
 }, {
-    pattern = "b3 16 xx",
-    name = "Switch 10"
+    pattern = "b3 16 ??",
+    name = "Switch 10",
+    value = "1"
 }, {
-    pattern = "b3 17 xx",
-    name = "Switch 11"
+    pattern = "b3 17 ??",
+    name = "Switch 11",
+    value = "1"
 }, {
-    pattern = "b3 18 xx",
-    name = "Switch 12"
+    pattern = "b3 18 ??",
+    name = "Switch 12",
+    value = "1"
 }, {
     pattern = "e? xx yy",
     name = "Pitch Bend",

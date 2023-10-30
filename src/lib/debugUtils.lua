@@ -21,7 +21,16 @@ local function dumpLog()
     return events
 end
 
+local function midiEventToString(event)
+    local hexStrings = {}
+    for i = 1, #event do
+        table.insert(hexStrings, string.format("%02X", event[i]))
+    end
+    return table.concat(hexStrings, " ")
+end
+
 return {
     log = log,
-    dumpLog = dumpLog
+    dumpLog = dumpLog,
+    midiEventToString = midiEventToString
 }
