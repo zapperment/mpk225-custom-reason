@@ -3,12 +3,17 @@
   "packageManager": "yarn@4.0.0",
   "scripts": {
     "format": "prettier . --write",
-    "log": "node ./scripts/logReceiver.mjs"
+    "log": "node ./scripts/log.mjs",
+    "install": "node ./scripts/install.mjs",
+    "install:debug": "node ./scripts/install.mjs debug"
   },
   "devDependencies": {
     "prettier": "^3.0.3"
   },
   "dependencies": {
-    "easymidi": "^3.1.0"
+    "chalk": "^5.3.0",
+    "easymidi": "^3.1.0",
+    "fs-extra": "^11.1.1",
+    "luabundle": "^1.6.0"
   }
 }

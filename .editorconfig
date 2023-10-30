@@ -4,8 +4,10 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 charset = utf-8
-tab_width = 4
 
 [*.remotemap]
 indent_style = tab
 tab_width = 32
+
+[*.lua]
+tab_width = 4

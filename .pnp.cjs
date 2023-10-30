@@ -26,7 +26,10 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["chalk", "npm:5.3.0"],\
           ["easymidi", "npm:3.1.0"],\
+          ["fs-extra", "npm:11.1.1"],\
+          ["luabundle", "npm:1.6.0"],\
           ["prettier", "npm:3.0.3"]\
         ],\
         "linkType": "SOFT"\
@@ -234,6 +237,15 @@ const RAW_RUNTIME_STATE =
           ["ssri", "npm:10.0.5"],\
           ["tar", "npm:6.2.0"],\
           ["unique-filename", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["chalk", [\
+      ["npm:5.3.0", {\
+        "packageLocation": "../../.yarn/berry/cache/chalk-npm-5.3.0-d181999efb-10c0.zip/node_modules/chalk/",\
+        "packageDependencies": [\
+          ["chalk", "npm:5.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -446,6 +458,18 @@ const RAW_RUNTIME_STATE =
           ["foreground-child", "npm:3.1.1"],\
           ["cross-spawn", "npm:7.0.3"],\
           ["signal-exit", "npm:4.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["fs-extra", [\
+      ["npm:11.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/fs-extra-npm-11.1.1-ca44602180-10c0.zip/node_modules/fs-extra/",\
+        "packageDependencies": [\
+          ["fs-extra", "npm:11.1.1"],\
+          ["graceful-fs", "npm:4.2.11"],\
+          ["jsonfile", "npm:6.1.0"],\
+          ["universalify", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -685,6 +709,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["jsonfile", [\
+      ["npm:6.1.0", {\
+        "packageLocation": "../../.yarn/berry/cache/jsonfile-npm-6.1.0-20a4796cee-10c0.zip/node_modules/jsonfile/",\
+        "packageDependencies": [\
+          ["jsonfile", "npm:6.1.0"],\
+          ["graceful-fs", "npm:4.2.11"],\
+          ["universalify", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lru-cache", [\
       ["npm:10.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/lru-cache-npm-10.0.1-0e1abf4c13-10c0.zip/node_modules/lru-cache/",\
@@ -705,6 +740,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/lru-cache-npm-7.18.3-e68be5b11c-10c0.zip/node_modules/lru-cache/",\
         "packageDependencies": [\
           ["lru-cache", "npm:7.18.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["luabundle", [\
+      ["npm:1.6.0", {\
+        "packageLocation": "../../.yarn/berry/cache/luabundle-npm-1.6.0-1c9ba94e90-10c0.zip/node_modules/luabundle/",\
+        "packageDependencies": [\
+          ["luabundle", "npm:1.6.0"],\
+          ["moonsharp-luaparse", "npm:0.2.4"],\
+          ["tslib", "npm:1.14.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -848,12 +894,24 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["moonsharp-luaparse", [\
+      ["npm:0.2.4", {\
+        "packageLocation": "../../.yarn/berry/cache/moonsharp-luaparse-npm-0.2.4-eb023d4658-10c0.zip/node_modules/moonsharp-luaparse/",\
+        "packageDependencies": [\
+          ["moonsharp-luaparse", "npm:0.2.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["mpk225-custom-reason", [\
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
           ["mpk225-custom-reason", "workspace:."],\
+          ["chalk", "npm:5.3.0"],\
           ["easymidi", "npm:3.1.0"],\
+          ["fs-extra", "npm:11.1.1"],\
+          ["luabundle", "npm:1.6.0"],\
           ["prettier", "npm:3.0.3"]\
         ],\
         "linkType": "SOFT"\
@@ -1235,6 +1293,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["tslib", [\
+      ["npm:1.14.1", {\
+        "packageLocation": "../../.yarn/berry/cache/tslib-npm-1.14.1-102499115e-10c0.zip/node_modules/tslib/",\
+        "packageDependencies": [\
+          ["tslib", "npm:1.14.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["unique-filename", [\
       ["npm:3.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/unique-filename-npm-3.0.0-77d68e0a45-10c0.zip/node_modules/unique-filename/",\
@@ -1251,6 +1318,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["unique-slug", "npm:4.0.0"],\
           ["imurmurhash", "npm:0.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["universalify", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/universalify-npm-2.0.0-03b8b418a8-10c0.zip/node_modules/universalify/",\
+        "packageDependencies": [\
+          ["universalify", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
