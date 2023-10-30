@@ -9,3 +9,6 @@ resources
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# IntelliJ
+.idea
