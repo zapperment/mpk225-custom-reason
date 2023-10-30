@@ -78,6 +78,60 @@ installation command `yarn install` again and restart Reason.
 You want to fiddle around with the code and make your own improvements? Great!
 Here are some instructions to get you started…
 
-###
+### Lua modules
 
-Lua remote codecs for Reason come as one big Lua file
+Lua remote codecs for Reason come as one big Lua file. For development, this is
+not optimal – the larger the file grows, the harder it is to navigate around in
+it. The MPK225 custom remote codec is subdivided into modules, separating Lua
+code for different purposes into different files. When the `yarn install` script
+is run, all the Lua modules are bundled into one Lua file for deployment, using
+Benjamin Dobell's excellent
+[luabundle library](https://github.com/Benjamin-Dobell/luabundle).
+
+### Reloading
+
+When you make changes to the codec, run `yarn install:debug` again, then in Reason, go to Settings > MIDI Keyboards and Controllers, uncheck the box “Use with Reason”, then check it again – this will reload the Reason remote codec with your latest changes.
+
+### Logging
+
+Reason's remote codec API does not provide any way to write logs. The
+`remote_trace` function that is supposed to fulfill this purpose, at least when
+running a codec in the codec test program does not work.
+
+This is bad – logging is the most basic tool for a developer to debug a program.
+Without it, developing a codec is a painful process of poking holes in the dark.
+
+To fix this, the MPK224 custom codec has its own logging mechanism. This is how
+it works:
+
+- The remote codec sends log messages as MIDI system exclusive messages through
+  an additional output port
+- A Node.js script listens for these sysex messages, decodes them and prints
+  them to the console
+
+To use the logging mechanism:
+
+- Create a MIDI port for logging:
+  - On a Mac, use the Audio MIDI setup app that comes with MacOS
+  - On Windows, use a third party program like
+    [Bome MIDI Translator Pro](https://www.bome.com/products/miditranslator)
+- Install the codec using `yarn install:debug` instead of `yarn install`
+- Delete any existing MPK225 remote surfaces in the “MIDI Keyboards and
+  Controllers” setup page
+- Rerun the remote surface installation procedure using the “Auto-detect
+  Surfaces” button
+- The four MPK225 surfaces that now show up in the list should all have the
+  description “Custom codec by Zapperment (debug version)” and allow you to
+  configure one addition output port – select the port you've set up for the
+  first MPK225 surface
+- On the console, run the command `yarn log`, specifying the name of your MIDI port, e.g. `yarn log "Codec Debug Bus 1"`
+- If everything is set up correctly, when you reload the remote surface in Reason [as explained above](#reloading), the logger should print a message (“remote codec initialised successfully”)
+
+You can now add log statements anywhere in the code to figure out what's going on! For example, take a look at the commented out line in the `remote_process_midi` function in [MPK225.lua](src/codecs/MPK225.lua). If you uncomment it, it will print MIDI messages coming in from the Akai keyboard to the console, which is useful for finding out what exactly the keyboard does when you use its controls.
+
+```lua
+function remote_process_midi()
+    log("Received MIDI event: " .. debugUtils.midiEventToString(event))
+    return false
+end
+```
