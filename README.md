@@ -90,7 +90,10 @@ Benjamin Dobell's excellent
 
 ### Reloading
 
-When you make changes to the codec, run `yarn install:debug` again, then in Reason, go to Settings > MIDI Keyboards and Controllers, uncheck the box “Use with Reason”, then check it again – this will reload the Reason remote codec with your latest changes.
+When you make changes to the codec, run `yarn install:debug` again, then in
+Reason, go to Settings > MIDI Keyboards and Controllers, uncheck the box “Use
+with Reason”, then check it again – this will reload the Reason remote codec
+with your latest changes.
 
 ### Logging
 
@@ -124,10 +127,18 @@ To use the logging mechanism:
   description “Custom codec by Zapperment (debug version)” and allow you to
   configure one addition output port – select the port you've set up for the
   first MPK225 surface
-- On the console, run the command `yarn log`, specifying the name of your MIDI port, e.g. `yarn log "Codec Debug Bus 1"`
-- If everything is set up correctly, when you reload the remote surface in Reason [as explained above](#reloading), the logger should print a message (“remote codec initialised successfully”)
+- On the console, run the command `yarn log`, specifying the name of your MIDI
+  port, e.g. `yarn log "Codec Debug Bus 1"`
+- If everything is set up correctly, when you reload the remote surface in
+  Reason [as explained above](#reloading), the logger should print a message
+  (“remote codec initialised successfully”)
 
-You can now add log statements anywhere in the code to figure out what's going on! For example, take a look at the commented out line in the `remote_process_midi` function in [MPK225.lua](src/codecs/MPK225.lua). If you uncomment it, it will print MIDI messages coming in from the Akai keyboard to the console, which is useful for finding out what exactly the keyboard does when you use its controls.
+You can now add log statements anywhere in the code to figure out what's going
+on! For example, take a look at the commented out line in the
+`remote_process_midi` function in [MPK225.lua](src/codecs/MPK225.lua). If you
+uncomment it, it will print MIDI messages coming in from the Akai keyboard to
+the console, which is useful for finding out what exactly the keyboard does when
+you use its controls.
 
 ```lua
 function remote_process_midi()

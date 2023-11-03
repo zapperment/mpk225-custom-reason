@@ -1,13 +1,12 @@
 import { bundle } from "luabundle";
 import fs from "fs-extra";
-import url from "url";
-import path from "path";
 import {
   getIsMac,
   getDebugModeFromArgs,
   getRemoteDir,
   success,
   failure,
+  getRootDir,
 } from "./utils/index.mjs";
 
 const isDebugMode = getDebugModeFromArgs();
@@ -72,8 +71,7 @@ if (fs.existsSync(mapsTargetDir)) {
   fs.mkdirSync(mapsTargetDir, { recursive: true });
 }
 
-const currentDir = url.fileURLToPath(import.meta.url);
-const rootDir = path.dirname(path.dirname(currentDir));
+const rootDir = getRootDir();
 const distDir = `${rootDir}/dist`;
 const srcDir = `${rootDir}/src`;
 const codecsSourceDir = `${srcDir}/codecs`;

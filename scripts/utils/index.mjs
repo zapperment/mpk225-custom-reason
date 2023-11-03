@@ -1,7 +1,13 @@
+export { convertSysExToString } from "./convertSysExToString.mjs";
 export { failure } from "./failure.mjs";
+export { getDumpFilePath } from "./getDumpFilePath.mjs";
 export { getIsMac } from "./getIsMac.mjs";
 export { getRemoteDir } from "./getRemoteDir.mjs";
+export { getRootDir } from "./getRootDir.mjs";
 export { getPortNameFromArgs } from "./getPortNameFromArgs.mjs";
 export { getDebugModeFromArgs } from "./getDebugModeFromArgs.mjs";
-export { listenForInput } from "./listenForInput.mjs";
+export { listenForDumpInput } from "./listenForDumpInput.mjs";
+export { listenForLogInput } from "./listenForLogInput.mjs";
+export { loadSysExFile } from "./loadSysExFile.mjs";
 export { success } from "./success.mjs";
+export { writeSysExFile } from "./writeSysExFile.mjs";

@@ -1,13 +1,12 @@
 import easymidi from "easymidi";
+import { convertSysExToString } from "./convertSysExToString.mjs";
 
 const sysexHeader = "F0 00 20 29 02 0A 01";
 
-export function listenForInput(portName) {
+export function listenForLogInput(portName) {
   const input = new easymidi.Input(portName);
   input.on("sysex", ({ bytes }) => {
-    const hexString = bytes
-      .map((byte) => ("0" + (byte & 0xff).toString(16)).slice(-2).toUpperCase())
-      .join(" ");
+    const hexString = convertSysExToString(bytes);
     if (!hexString.startsWith(sysexHeader)) {
       return;
     }
