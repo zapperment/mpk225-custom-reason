@@ -23,6 +23,8 @@ come bundled with Reason gives you the following benefits:
   controlling knobs on Reason devices with the MPK225 knobs, the Reason controls
   would jump when moving the knob on the MPK225 after switching devices on the
   Reason rack; this is fixed by the custom remote codec
+- **Additional devices supported**
+  - Synapse The Legend
 
 ## Installation
 
