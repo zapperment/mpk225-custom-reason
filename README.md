@@ -53,7 +53,7 @@ When everything is set up correctly as [described above](#prerequisites), you
 can install the custom remote codec and map with this console command:
 
 ```
-yarn install
+yarn setup
 ```
 
 Then you can start Reason, open the settings page, go to “MIDI Keyboards and
@@ -73,7 +73,7 @@ remote codec and map from Akai that comes bundled with Reason.
 ### Updating the remote codec and map
 
 When a new version of the custom remote codec and map is released, run the
-installation command `yarn install` again and restart Reason.
+installation command `yarn setup` again and restart Reason.
 
 ## Development
 
@@ -85,14 +85,14 @@ Here are some instructions to get you started…
 Lua remote codecs for Reason come as one big Lua file. For development, this is
 not optimal – the larger the file grows, the harder it is to navigate around in
 it. The MPK225 custom remote codec is subdivided into modules, separating Lua
-code for different purposes into different files. When the `yarn install` script
+code for different purposes into different files. When the `yarn setup` script
 is run, all the Lua modules are bundled into one Lua file for deployment, using
 Benjamin Dobell's excellent
 [luabundle library](https://github.com/Benjamin-Dobell/luabundle).
 
 ### Reloading
 
-When you make changes to the codec, run `yarn install:debug` again, then in
+When you make changes to the codec, run `yarn setup:debug` again, then in
 Reason, go to Settings > MIDI Keyboards and Controllers, uncheck the box “Use
 with Reason”, then check it again – this will reload the Reason remote codec
 with your latest changes.

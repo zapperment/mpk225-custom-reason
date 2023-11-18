@@ -5,8 +5,8 @@
   "scripts": {
     "format": "prettier . --write",
     "log": "node ./scripts/log.mjs",
-    "install": "node ./scripts/install.mjs",
-    "install:debug": "node ./scripts/install.mjs debug",
+    "setup": "node ./scripts/setup.mjs",
+    "setup:debug": "node ./scripts/setup.mjs debug",
     "dump:receive": "node ./scripts/receiveDump.mjs",
     "dump:send": "node ./scripts/sendDump.mjs",
     "dump:print": "node ./scripts/printDump.mjs"
